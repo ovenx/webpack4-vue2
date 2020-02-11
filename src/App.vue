@@ -7,24 +7,24 @@
 </template>
 
 <script>
-import getData from "./utils";
 export default {
   name: "app",
   data() {
     return {
-      msg: "Welcome to Your Vue.js"
+      msg: "default text data"
     };
   },
   created() {
-    this.fetchData();
+    this.getData();
   },
   methods: {
-    async fetchData() {
-      const data = await getData();
-      this.msg = data;
-    },
-    onChange(date, dateString) {
-      console.log(date, dateString);
+    async getData() {
+      const promiseData = function() {
+        return new Promise((resolve, reject) => {
+          resolve("changed text data");
+        });
+      };
+      this.msg = await promiseData();
     }
   }
 };
@@ -32,11 +32,6 @@ export default {
 
 <style lang="scss">
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-
-  h1 {
-    color: #cc3333;
-  }
   img {
     margin-top: 20px;
     width: 200px;
