@@ -1,7 +1,6 @@
 {
     "plugins": [
-        "@babel/plugin-transform-runtime",
-        ["import", { "libraryName": "ant-design-vue", "libraryDirectory": "es", "style": "css" }] // `style: true` 会加载 less 文件
+        "@babel/plugin-transform-runtime"
     ],
     "presets": ["@babel/preset-env"]
 }

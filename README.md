@@ -1,7 +1,16 @@
 ## webpack4-vue2
 
-```shell
+### install
+```
 npm install 
-npm run dev  // run 
-npm run build // package 
+```
+
+### run 
+```
+npm run dev
+```
+
+### build
+```
+npm run build 
 ```
